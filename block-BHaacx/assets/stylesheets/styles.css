@@ -407,7 +407,8 @@ a {
 .skill-cards .card4 {
   background-color: white;
 }
-.skill-cards .card4 h3, .skill-cards .card4 p {
+.skill-cards .card4 h3,
+.skill-cards .card4 p {
   color: grey;
 }
 .skill-cards .card4 .fa {
@@ -441,21 +442,29 @@ a {
   color: white;
   margin-right: 2rem;
 }
-.experiences .col-2 .exp-1, .education .col-2 .exp-1, .experiences .col-2 .exp-2, .education .col-2 .exp-2 {
+.experiences .col-2 .exp-1, .education .col-2 .exp-1,
+.experiences .col-2 .exp-2,
+.education .col-2 .exp-2 {
   justify-content: flex-start;
   margin-bottom: 2rem;
 }
-.experiences .col-2 .exp-1 span, .education .col-2 .exp-1 span, .experiences .col-2 .exp-2 span, .education .col-2 .exp-2 span {
+.experiences .col-2 .exp-1 span, .education .col-2 .exp-1 span,
+.experiences .col-2 .exp-2 span,
+.education .col-2 .exp-2 span {
   font-size: 1.2rem;
   color: white;
   text-transform: capitalize;
 }
-.experiences .col-2 .exp-1 strong, .education .col-2 .exp-1 strong, .experiences .col-2 .exp-2 strong, .education .col-2 .exp-2 strong {
+.experiences .col-2 .exp-1 strong, .education .col-2 .exp-1 strong,
+.experiences .col-2 .exp-2 strong,
+.education .col-2 .exp-2 strong {
   color: #632900;
   font-weight: bold;
   font-size: 0.9rem;
 }
-.experiences .col-2 .exp-1 p, .education .col-2 .exp-1 p, .experiences .col-2 .exp-2 p, .education .col-2 .exp-2 p {
+.experiences .col-2 .exp-1 p, .education .col-2 .exp-1 p,
+.experiences .col-2 .exp-2 p,
+.education .col-2 .exp-2 p {
   color: #f0d8d8;
   font-size: 0.8rem;
   margin: 0.3rem 0;
