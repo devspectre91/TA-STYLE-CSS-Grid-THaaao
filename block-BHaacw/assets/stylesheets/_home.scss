@@ -1,0 +1,122 @@
+body,
+html {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 3rem;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.8rem 0;
+	text-transform: capitalize;
+}
+.container {
+	grid-gap: 1rem;
+	display: grid;
+  height: 80vh;
+  grid-template-areas: 'n' 'm ';
+                           
+
+ 
+     
+
+}
+.header {
+  grid-area: n;
+	.navbar {
+		border-top: 3px solid $sky-blue;
+	 
+    background-color: white;
+    ul{
+      justify-content: space-evenly;
+    }
+		li {
+      padding: 0.5rem 0;
+			a {
+				color: $sky-blue;
+				font-weight: bold;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.main {
+  grid-area: m;
+  display: grid;
+  
+  grid-gap: 1rem;
+  grid-template-areas: 'la c ra' 
+                       'lb c rb'
+                        '. . rc';
+ grid-template-rows: '1fr 1fr 1fr';
+	.card {
+		padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+		border-top: 3px solid $sky-blue;
+		h3 {
+			font-size: 1.2rem;
+			text-transform: capitalize;
+			color: $text-brown;
+			font-weight: bold;
+		}
+		p {
+			font-size: 0.8rem;
+			padding: 1rem 0;
+			color: $text-brown;
+      font-weight: bold;
+		}
+		a {
+			color: $red;
+			text-transform: capitalize;
+			font-size: 0.9rem;
+		}
+	}
+	.la {
+		grid-area: la;
+	}
+
+	.lb {
+		grid-area: lb;
+		.growth {
+			text-align: center;
+			img {
+				width: 50%;
+			}
+		}
+	}
+	.center {
+		grid-area: c;
+    .cat{
+      text-align: center;
+      img{
+        width: 80%;
+        border-radius: 50%;
+
+      }
+    }
+	}
+	.ra {
+		grid-area: ra;
+    a{
+      background-color: $red;
+      padding: 0.5rem 0;
+      color: white
+    }
+	}
+	.rb {
+		grid-area: rb;
+    h3{
+      background-color: $sky-blue;
+      padding: 0.5rem 0;
+      color: white
+    }
+	}
+	.rc {
+		grid-area: rc;
+	}
+
+}
