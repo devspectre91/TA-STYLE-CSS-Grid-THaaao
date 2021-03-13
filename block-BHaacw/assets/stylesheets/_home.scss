@@ -1,0 +1,114 @@
+// styling header section
+.header {
+	h1 {
+		font-size: 2rem;
+		color: white;
+		font-weight: bold;
+		margin-top: 3rem;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+	.nav {
+		background-color: white;
+		border-top: 3px solid $sky-blue;
+		ul {
+			justify-content: space-evenly;
+		}
+		a {
+			color: $sky-blue;
+			font-weight: bold;
+			text-transform: capitalize;
+			text-decoration: none;
+			font-size: 1.2rem;
+		}
+		li {
+			padding: 0.5rem 0;
+		}
+	}
+}
+
+// styling main section
+.main {
+	margin-top: 1.5rem;
+	.grid {
+		display: grid;
+		height: 100vh;
+		grid-gap: 1.5rem;
+		grid-template-columns: 250px auto 250px;
+		grid-auto-rows: 130px;
+		grid-template-areas:
+			"la c ra"
+			"lb c rb"
+			". c rc";
+	}
+	.card {
+		background-color: white;
+		border-radius: 0.2rem;
+	}
+	h3 {
+		font-size: 1rem;
+		text-transform: capitalize;
+		width: 100%;
+		padding: 0.4rem;
+		color: #665d4e;
+		font-weight: bold;
+	}
+	p {
+		font-size: 0.8rem;
+		margin: 0.4rem 0;
+		color: $text-brown;
+		padding: 0.4rem;
+	}
+	a {
+		color: $red;
+		font-size: 0.8rem;
+		margin: 0.3rem 0;
+		padding: 0.4rem;
+		display: block;
+	}
+
+	.la {
+		grid-area: la;
+	}
+	.lb {
+		grid-area: lb;
+		height: 230px;
+
+		.growth {
+			text-align: center;
+			img {
+				width: 40%;
+			}
+		}
+	}
+	.center {
+		grid-area: c;
+
+		.cat {
+			text-align: center;
+			img {
+				margin: 2rem 0;
+				width: 240px;
+				height: 240px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+	}
+	.ra {
+		grid-area: ra;
+		a {
+			background-color: $red;
+			color: white;
+		}
+	}
+	.rb {
+		grid-area: rb;
+		h3 {
+			background-color: $sky-blue;
+		}
+	}
+	.rc {
+		grid-area: rc;
+	}
+}
