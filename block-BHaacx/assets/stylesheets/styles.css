@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-c {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-20 {
+  flex: 0 1 20%;
+}
+
+.flex-23 {
+  flex: 0 1 23%;
+}
+
+.flex-30 {
+  flex: 0 1 30%;
+}
+
+.flex-32 {
+  flex: 0 1 32%;
+}
+
+.flex-48 {
+  flex: 0 1 48%;
+}
+
+.flex-50 {
+  flex: 0 1 50%;
+}
+
+.flex-65 {
+  flex: 0 1 65%;
+}
+
+.flex-70 {
+  flex: 0 1 80%;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.btn-secondary, .btn-primary {
+  padding: 0.6rem 2.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 40px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  display: inline;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid black;
+}
+
+.btn-secondary {
+  font-weight: normal;
+  color: grey;
+  border: none;
+  background-color: white;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header .col-1 {
+  background-color: orange;
+  background-image: url(../media/home-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  height: 100vh;
+  padding: 2rem;
+}
+.header .col-1 span {
+  margin-left: 8rem;
+  color: rgba(34, 33, 33, 0.904);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.808);
+}
+.header .col-2 {
+  background-color: #f8e0d1;
+  padding: 2rem 0;
+}
+.header .col-2 ul {
+  justify-content: space-around;
+}
+.header .col-2 ul li a {
+  font-size: 0.9rem;
+  color: grey;
+  text-transform: uppercase;
+}
+.header .col-2 ul li a:hover {
+  color: #ECAF4E;
+}
+.header .col-2 ul li a.selected {
+  color: #ECAF4E;
+}
+.header small {
+  display: inline-block;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  color: #979797;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.header h1 {
+  color: #575555;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.header h1 .stimulus {
+  font-weight: bold;
+}
+.header p {
+  color: #b1b0b0;
+  font-size: 1rem;
+  line-height: 2;
+  margin: 1rem 0;
+  margin-bottom: 4rem;
+}
+
+.skills {
+  display: grid;
+  height: 320px;
+  grid-template-columns: 1fr 1fr;
+}
+.skills .col-1 {
+  padding: 1.5rem;
+}
+.skills .col-1 h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin: 0.6rem 0;
+}
+.skills .col-1 small {
+  color: #ECAF4E;
+  text-transform: capitalize;
+}
+.skills .col-1 p {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  text-align: justify;
+  color: #a5a3a3;
+}
+.skills .col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.skills .col-2 .about-image {
+  background-image: url(../media/about-img.jpg);
+  background-size: 300%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+}
+.skills .col-2 .my-skills {
+  background-color: #ECAF4E;
+  padding: 2rem;
+}
+.skills .col-2 .my-skills h2 {
+  color: white;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  margin: 0.6rem 0;
+}
+.skills .col-2 .my-skills .skill-intro {
+  display: inline-block;
+  margin: 0.6rem 0;
+  margin-bottom: 3rem;
+  font-size: 0.8rem;
+  text-align: justify;
+  color: white;
+}
+.skills .col-2 .my-skills span {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.skills .col-2 .my-skills .white-text {
+  color: white;
+}
+.skills .col-2 .my-skills .outer {
+  height: 2px;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+.skills .col-2 .my-skills .outer .inner1 {
+  height: 2.5px;
+  width: 90%;
+  background-color: black;
+}
+.skills .col-2 .my-skills .outer .inner2 {
+  height: 2px;
+  width: 70%;
+  background-color: black;
+}
+.skills .col-2 .my-skills .outer .inner3 {
+  height: 2px;
+  background-color: black;
+  width: 80%;
+}
+
+.skill-cards .card4, .skill-cards .card3, .skill-cards .card2, .skill-cards .card1 {
+  text-align: center;
+  padding: 2rem;
+}
+.skill-cards .card4 .fa, .skill-cards .card3 .fa, .skill-cards .card2 .fa, .skill-cards .card1 .fa {
+  color: white;
+  margin: 1rem 0;
+}
+.skill-cards .card4 h3, .skill-cards .card3 h3, .skill-cards .card2 h3, .skill-cards .card1 h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  margin: 1rem 0;
+  color: white;
+}
+.skill-cards .card4 p, .skill-cards .card3 p, .skill-cards .card2 p, .skill-cards .card1 p {
+  line-height: 2;
+  color: white;
+}
+
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.skill-cards .card1 {
+  background-color: #ECAF4E;
+}
+.skill-cards .card2 {
+  background-color: #FC683E;
+}
+.skill-cards .card3 {
+  background-color: black;
+}
+.skill-cards .card4 {
+  background-color: white;
+}
+.skill-cards .card4 h3, .skill-cards .card4 p {
+  color: grey;
+}
+.skill-cards .card4 .fa {
+  color: black;
+}
+
+.experiences .col-1, .education .col-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+}
+
+.experiences .col-2, .education .col-2 {
+  padding: 3rem;
+}
+.experiences .col-2 h2, .education .col-2 h2 {
+  font-size: 2.4rem;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.experiences .col-2 .exp-intro, .education .col-2 .exp-intro {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+  color: #d8d7d7;
+}
+.experiences .col-2 .fa, .education .col-2 .fa {
+  color: white;
+  margin-right: 2rem;
+}
+.experiences .col-2 .exp-1, .education .col-2 .exp-1, .experiences .col-2 .exp-2, .education .col-2 .exp-2 {
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.experiences .col-2 .exp-1 span, .education .col-2 .exp-1 span, .experiences .col-2 .exp-2 span, .education .col-2 .exp-2 span {
+  font-size: 1.2rem;
+  color: white;
+  text-transform: capitalize;
+}
+.experiences .col-2 .exp-1 strong, .education .col-2 .exp-1 strong, .experiences .col-2 .exp-2 strong, .education .col-2 .exp-2 strong {
+  color: #632900;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.experiences .col-2 .exp-1 p, .education .col-2 .exp-1 p, .experiences .col-2 .exp-2 p, .education .col-2 .exp-2 p {
+  color: #f0d8d8;
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
+
+.experiences, .education {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 380px;
+}
+.experiences .col-1, .education .col-1 {
+  background-image: url(../media/experience-img.jpg);
+}
+.experiences .col-2, .education .col-2 {
+  background-color: #FC683E;
+}
+
+.education .col-1 {
+  order: 2;
+  background-image: url(../media/education-img.jpg);
+}
+.education .col-2 {
+  background-color: #ECAF4E;
+}/*# sourceMappingURL=styles.css.map */
