@@ -2,9 +2,11 @@
 .header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "a b";
 
 	.col-1 {
-		background-color: orange;
+		grid-area: a;
+
 		background-image: url(../media/home-img.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -20,6 +22,7 @@
 		}
 	}
 	.col-2 {
+		grid-area: b;
 		background-color: $light-brown;
 		padding: 2rem 0;
 
@@ -61,7 +64,7 @@
 		font-size: 1rem;
 		line-height: 2;
 		margin: 1rem 0;
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 }
 
@@ -69,11 +72,12 @@
 
 .skills {
 	display: grid;
-	height: 320px;
-	grid-template-columns: 1fr 1fr;
 
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "a b";
 	.col-1 {
-		padding: 1.5rem;
+		grid-area: a;
+		padding: 2rem;
 		h1 {
 			font-size: 2.5rem;
 			text-transform: capitalize;
@@ -91,6 +95,7 @@
 		}
 	}
 	.col-2 {
+		grid-area: b;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		.about-image {
@@ -169,19 +174,24 @@
 .skill-cards {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: "a b c d";
 	.card1 {
+		grid-area: a;
 		@extend %card;
 		background-color: $yellow;
 	}
 	.card2 {
+		grid-area: b;
 		@extend %card;
 		background-color: $orange;
 	}
 	.card3 {
+		grid-area: c;
 		@extend %card;
 		background-color: black;
 	}
 	.card4 {
+		grid-area: d;
 		@extend %card;
 		background-color: white;
 		h3,
@@ -244,13 +254,16 @@
 }
 .experiences {
 	display: grid;
+	grid-template-areas: "a b";
 	grid-template-columns: 1fr 1fr;
-	height: 380px;
+
 	.col-1 {
+		grid-area: a;
 		@extend %exp-image;
 		background-image: url(../media/experience-img.jpg);
 	}
 	.col-2 {
+		grid-area: b;
 		@extend %exp-data;
 		background-color: $orange;
 	}
@@ -258,6 +271,7 @@
 
 .education {
 	@extend .experiences;
+
 	.col-1 {
 		order: 2;
 		@extend %exp-image;
@@ -265,5 +279,141 @@
 	}
 	.col-2 {
 		background-color: $yellow;
+	}
+}
+.contact {
+	background-color: $orange;
+	display: grid;
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "a b";
+
+	.col-1 {
+		grid-area: a;
+
+		padding: 3rem;
+		h2 {
+			font-size: 2.5rem;
+			color: white;
+			margin-bottom: 0.5rem;
+			text-transform: capitalize;
+		}
+		span {
+			color: rgb(224, 224, 224);
+			font-size: 1rem;
+			display: inline-block;
+			margin-bottom: 3rem;
+		}
+		input {
+			display: block;
+			padding: 1rem;
+			border: none;
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
+			outline: none;
+			border-bottom: 1px solid $yellow;
+			background-color: transparent;
+			width: 100%;
+			&::placeholder {
+				color: rgb(224, 224, 224);
+				font-size: 1.2rem;
+				font-weight: lighter;
+				text-transform: capitalize;
+			}
+		}
+		textarea {
+			width: 100%;
+			padding: 1rem;
+			border: none;
+			border-bottom: 1px solid $yellow;
+			margin-bottom: 3rem;
+			outline: none;
+			background-color: transparent;
+			&::placeholder {
+				color: rgb(224, 224, 224);
+				font-size: 1.2rem;
+				font-weight: lighter;
+				text-transform: capitalize;
+			}
+		}
+		.btn-secondary {
+			display: inline-block;
+			padding: 0.5rem 7rem;
+			font-size: 1.3rem;
+		}
+	}
+	.col-2 {
+		grid-area: b;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		.contact-image {
+			background: url(../media/contact-img.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position-x: 50%;
+		}
+		.contact-info {
+			background-color: black;
+			padding: 3rem;
+			color: white;
+			strong {
+				display: inline-block;
+				font-size: 1.5rem;
+				color: white;
+				margin-bottom: 0.5rem;
+				text-transform: capitalize;
+			}
+			address {
+				font-size: 1rem;
+				color: rgb(224, 224, 224);
+				margin-bottom: 4rem;
+				text-transform: capitalize;
+			}
+			.fa {
+				color: rgb(224, 224, 224);
+				margin-bottom: 1rem;
+				margin-right: 1rem;
+			}
+			.yellow-text {
+				color: $yellow;
+			}
+		}
+	}
+	.col-3 {
+		grid-area: c;
+		padding: 3rem;
+		iframe {
+			width: 90%;
+		}
+		grid-column: 1/-1;
+		text-align: center;
+	}
+}
+
+.footer {
+	padding: 10rem 0;
+	text-align: center;
+
+	small {
+		display: inline-block;
+		color: #cacac9;
+		font-size: 1rem;
+		margin-bottom: 2rem;
+	}
+	strong {
+		color: $yellow;
+		font-size: 1rem;
+	}
+	.social-icons {
+		ul {
+			justify-content: center;
+			li a {
+				font-size: 1rem;
+			}
+		}
+	}
+	.fa {
+		color: #a5a5a5;
+		margin-right: 2rem;
 	}
 }

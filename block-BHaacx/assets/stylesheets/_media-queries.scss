@@ -1,0 +1,79 @@
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 10px;
+	}
+
+	.header,
+	.skills,
+	.experiences {
+		grid-template-columns: 1fr;
+		grid-template-areas: "a" "b";
+	}
+	.header {
+		.col-2 {
+			height: 40vh;
+			nav {
+				display: none;
+			}
+			small {
+				margin-top: 2rem;
+			}
+		}
+	}
+	.skills {
+		.col-1 {
+			padding: 4rem 3rem;
+		}
+		.col-2 {
+			grid-template-columns: 1fr;
+			grid-template-areas: "p" "q";
+
+			.about-image {
+				grid-area: p;
+				background-size: cover;
+				height: 320px;
+			}
+			.my-skills {
+				height: 250px;
+				grid-area: q;
+			}
+		}
+	}
+	.skill-cards {
+		grid-template-columns: 1fr;
+		grid-template-areas: "a" "b" "c" "d";
+		grid-auto-rows: 200px;
+		.card1 {
+			align-items: center;
+		}
+	}
+	.experiences {
+		.col-1 {
+			background-size: cover;
+			height: 320px;
+		}
+	}
+	.contact {
+		grid-template-columns: 1fr;
+		grid-template-areas: "a" "b" "c";
+		.col-1 {
+			.btn-secondary {
+				display: block;
+				text-align: center;
+			}
+		}
+		.col-2 {
+			grid-template-columns: 1fr;
+			grid-template-areas: "p" "q";
+			.contact-image {
+				grid-area: p;
+				background-size: cover;
+				height: 320px;
+			}
+			.contact-info {
+				height: 250px;
+				grid-area: q;
+			}
+		}
+	}
+}

@@ -15,13 +15,13 @@
 			</div>
 			<div class="col-2">
 				<div class="container">
-					<nav>
+					<nav class=".nav-bar">
 						<ul class="flex">
-							<li><a class="selected" href="">home</a></li>
-							<li><a href="">about me</a></li>
-							<li><a href="">experiences</a></li>
+							<li><a class="selected" href="index.html">home</a></li>
+							<li><a href="#about-me">about me</a></li>
+							<li><a href="#experiences">experiences</a></li>
 							<li><a href="">testimonials</a></li>
-							<li><a href="">contact</a></li>
+							<li><a href="#contact">contact</a></li>
 						</ul>
 					</nav>
 
@@ -41,7 +41,7 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="skills">
+			<section id="about-me" class="skills">
 				<div class="col-1">
 					<h1>donec auctor</h1>
 					<small>sed vulputae diaml loamd quis lebendium</small>
@@ -120,7 +120,7 @@
 				</div>
 			</section>
 
-			<section class="experiences">
+			<section id="experiences" class="experiences">
 				<div class="col-1"></div>
 				<div class="col-2">
 					<h2>my experiences</h2>
@@ -186,7 +186,95 @@
 					</div>
 				</div>
 			</section>
+
+			<section id="contact" class="contact">
+				<div class="col-1">
+					<h2>say hello ..</h2>
+					<span
+						>Integer ipsum dolor sit amet consectetur adipisicing elit
+						electus, quas
+					</span>
+					<fieldset>
+						<input type="text" placeholder="your name" />
+						<input type="text" placeholder="your email" />
+						<textarea
+							name=""
+							id=""
+							cols="30"
+							rows="8"
+							placeholder="Write your message"
+						></textarea>
+						<div class="btn-secondary">Send</div>
+					</fieldset>
+				</div>
+				<div class="col-2">
+					<div class="contact-image"></div>
+					<div class="contact-info">
+						<strong>visit my office</strong>
+						<address>
+							456 new york sreet 2200, new york. <br />
+							USA
+						</address>
+						<strong>contact</strong>
+						<div>
+							<i class="fa fa-phone" aria-hidden="true"></i
+							><span> 01-1100-11000</span>
+						</div>
+						<div>
+							<i class="fa fa-envelope" aria-hidden="true"></i
+							><span class="yellow-text"> hello@company.co</span>
+						</div>
+						<div>
+							<i class="fa fa-globe" aria-hidden="true"></i
+							><span class="yellow-text"> company.io</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14197.60221324001!2d78.0421422!3d27.1751448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1615671413029!5m2!1sen!2sin"
+						width="1200"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+					></iframe>
+				</div>
+			</section>
 		</main>
-		<footer></footer>
+		<footer class="footer">
+			<!-- Copyright -->
+			<small
+				>Copyright &copy; 2016 Your Company | Design:
+				<strong>templatemo</strong></small
+			>
+			<!-- Social Navigation -->
+			<div class="social-icons">
+				<ul class="flex">
+					<li>
+						<a href=""
+							><i class="fa fa-facebook-official" aria-hidden="true"></i
+						></a>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					</li>
+					<li>
+						<a href="">
+							<i
+								class="fa fa-google-plus-official"
+								aria-hidden="true"
+							></i
+						></a>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>

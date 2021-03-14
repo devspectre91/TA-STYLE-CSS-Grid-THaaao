@@ -233,9 +233,10 @@ a {
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
 }
 .header .col-1 {
-  background-color: orange;
+  grid-area: a;
   background-image: url(../media/home-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -251,6 +252,7 @@ a {
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.808);
 }
 .header .col-2 {
+  grid-area: b;
   background-color: #f8e0d1;
   padding: 2rem 0;
 }
@@ -263,10 +265,10 @@ a {
   text-transform: uppercase;
 }
 .header .col-2 ul li a:hover {
-  color: #ECAF4E;
+  color: #ecaf4e;
 }
 .header .col-2 ul li a.selected {
-  color: #ECAF4E;
+  color: #ecaf4e;
 }
 .header small {
   display: inline-block;
@@ -290,16 +292,17 @@ a {
   font-size: 1rem;
   line-height: 2;
   margin: 1rem 0;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .skills {
   display: grid;
-  height: 320px;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
 }
 .skills .col-1 {
-  padding: 1.5rem;
+  grid-area: a;
+  padding: 2rem;
 }
 .skills .col-1 h1 {
   font-size: 2.5rem;
@@ -307,7 +310,7 @@ a {
   margin: 0.6rem 0;
 }
 .skills .col-1 small {
-  color: #ECAF4E;
+  color: #ecaf4e;
   text-transform: capitalize;
 }
 .skills .col-1 p {
@@ -317,6 +320,7 @@ a {
   color: #a5a3a3;
 }
 .skills .col-2 {
+  grid-area: b;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -327,7 +331,7 @@ a {
   background-repeat: no-repeat;
 }
 .skills .col-2 .my-skills {
-  background-color: #ECAF4E;
+  background-color: #ecaf4e;
   padding: 2rem;
 }
 .skills .col-2 .my-skills h2 {
@@ -394,17 +398,22 @@ a {
 .skill-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a b c d";
 }
 .skill-cards .card1 {
-  background-color: #ECAF4E;
+  grid-area: a;
+  background-color: #ecaf4e;
 }
 .skill-cards .card2 {
-  background-color: #FC683E;
+  grid-area: b;
+  background-color: #fc683e;
 }
 .skill-cards .card3 {
+  grid-area: c;
   background-color: black;
 }
 .skill-cards .card4 {
+  grid-area: d;
   background-color: white;
 }
 .skill-cards .card4 h3,
@@ -472,14 +481,16 @@ a {
 
 .experiences, .education {
   display: grid;
+  grid-template-areas: "a b";
   grid-template-columns: 1fr 1fr;
-  height: 380px;
 }
 .experiences .col-1, .education .col-1 {
+  grid-area: a;
   background-image: url(../media/experience-img.jpg);
 }
 .experiences .col-2, .education .col-2 {
-  background-color: #FC683E;
+  grid-area: b;
+  background-color: #fc683e;
 }
 
 .education .col-1 {
@@ -487,5 +498,237 @@ a {
   background-image: url(../media/education-img.jpg);
 }
 .education .col-2 {
-  background-color: #ECAF4E;
+  background-color: #ecaf4e;
+}
+
+.contact {
+  background-color: #fc683e;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
+}
+.contact .col-1 {
+  grid-area: a;
+  padding: 3rem;
+}
+.contact .col-1 h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.contact .col-1 span {
+  color: #e0e0e0;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+.contact .col-1 input {
+  display: block;
+  padding: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border-bottom: 1px solid #ecaf4e;
+  background-color: transparent;
+  width: 100%;
+}
+.contact .col-1 input::-moz-placeholder {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.contact .col-1 input:-ms-input-placeholder {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.contact .col-1 input::placeholder {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.contact .col-1 textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #ecaf4e;
+  margin-bottom: 3rem;
+  outline: none;
+  background-color: transparent;
+}
+.contact .col-1 textarea::-moz-placeholder {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.contact .col-1 textarea:-ms-input-placeholder {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.contact .col-1 textarea::placeholder {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.contact .col-1 .btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 7rem;
+  font-size: 1.3rem;
+}
+.contact .col-2 {
+  grid-area: b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact .col-2 .contact-image {
+  background: url(../media/contact-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+}
+.contact .col-2 .contact-info {
+  background-color: black;
+  padding: 3rem;
+  color: white;
+}
+.contact .col-2 .contact-info strong {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.contact .col-2 .contact-info address {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+}
+.contact .col-2 .contact-info .fa {
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+.contact .col-2 .contact-info .yellow-text {
+  color: #ecaf4e;
+}
+.contact .col-3 {
+  grid-area: c;
+  padding: 3rem;
+  grid-column: 1/-1;
+  text-align: center;
+}
+.contact .col-3 iframe {
+  width: 90%;
+}
+
+.footer {
+  padding: 10rem 0;
+  text-align: center;
+}
+.footer small {
+  display: inline-block;
+  color: #cacac9;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.footer strong {
+  color: #ecaf4e;
+  font-size: 1rem;
+}
+.footer .social-icons ul {
+  justify-content: center;
+}
+.footer .social-icons ul li a {
+  font-size: 1rem;
+}
+.footer .fa {
+  color: #a5a5a5;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+
+  .header,
+.skills,
+.experiences,
+.education {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b";
+  }
+
+  .header .col-2 {
+    height: 40vh;
+  }
+  .header .col-2 nav {
+    display: none;
+  }
+  .header .col-2 small {
+    margin-top: 2rem;
+  }
+
+  .skills .col-1 {
+    padding: 4rem 3rem;
+  }
+  .skills .col-2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "p" "q";
+  }
+  .skills .col-2 .about-image {
+    grid-area: p;
+    background-size: cover;
+    height: 320px;
+  }
+  .skills .col-2 .my-skills {
+    height: 250px;
+    grid-area: q;
+  }
+
+  .skill-cards {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d";
+    grid-auto-rows: 200px;
+  }
+  .skill-cards .card1 {
+    align-items: center;
+  }
+
+  .experiences .col-1, .education .col-1 {
+    background-size: cover;
+    height: 320px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c";
+  }
+  .contact .col-1 .btn-secondary {
+    display: block;
+    text-align: center;
+  }
+  .contact .col-2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "p" "q";
+  }
+  .contact .col-2 .contact-image {
+    grid-area: p;
+    background-size: cover;
+    height: 320px;
+  }
+  .contact .col-2 .contact-info {
+    height: 250px;
+    grid-area: q;
+  }
 }/*# sourceMappingURL=styles.css.map */
